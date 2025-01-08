@@ -8,6 +8,9 @@ interface MilestonesState {
 	milestone3: boolean;
 	milestone4: boolean;
 	milestone5: boolean;
+	milestone6: boolean;
+	milestone7: boolean;
+	milestone8: boolean;
 }
 
 export default function Home() {
@@ -17,6 +20,9 @@ export default function Home() {
 		milestone3: false,
 		milestone4: false,
 		milestone5: false,
+		milestone6: false,
+		milestone7: false,
+		milestone8: false,
 	});
 
 	const toggleMilestone = (milestone: keyof MilestonesState) => {
@@ -26,6 +32,9 @@ export default function Home() {
 			milestone3: milestone === "milestone3",
 			milestone4: milestone === "milestone4",
 			milestone5: milestone === "milestone5",
+			milestone6: milestone === "milestone6",
+			milestone7: milestone === "milestone7",
+			milestone8: milestone === "milestone8",
 		});
 	};
 
@@ -76,6 +85,30 @@ export default function Home() {
 								Milestone 5
 							</button>
 						</li>
+						<li>
+							<button
+								onClick={() => toggleMilestone("milestone6")}
+								className="w-full text-left px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-md"
+							>
+								Milestone 6
+							</button>
+						</li>
+						<li>
+							<button
+								onClick={() => toggleMilestone("milestone7")}
+								className="w-full text-left px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-md"
+							>
+								Milestone 7
+							</button>
+						</li>
+						<li>
+							<button
+								onClick={() => toggleMilestone("milestone8")}
+								className="w-full text-left px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-md"
+							>
+								Milestone 8
+							</button>
+						</li>
 					</ul>
 				</div>
 			</aside>
@@ -97,22 +130,14 @@ export default function Home() {
 								<h2 className="text-2xl font-bold mb-6 text-blue-700">Team Presentation</h2>
 								<div className="grid md:grid-cols-2 gap-8">
 									<div className="bg-white p-6 rounded-lg shadow-md">
-										<img
-											src="https://media.licdn.com/dms/image/v2/D4D03AQHnGahpof07Kw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1695993853348?e=1735776000&v=beta&t=0kim0E12_CFacZD7cSry_c51KpE3aJAfcKHbg_6tfiA"
-											alt="Ion Duiu"
-											className="w-32 h-32 rounded-full mx-auto mb-4"
-										/>
-										<h3 className="text-xl font-semibold text-center">Ion Duiu</h3>
+										<img src="/ionut.jpeg" alt="Ion Duiu" className="w-32 h-32 rounded-full mx-auto mb-4" />
+										<h3 className="text-xl font-semibold text-center text-gray-700">Ion Duiu</h3>
 										<p className="text-center text-gray-600">Co-Founder, CEO</p>
 										<p className="text-center text-blue-600 mt-2">ionduiu@celira.dev</p>
 									</div>
 									<div className="bg-white p-6 rounded-lg shadow-md">
-										<img
-											src="https://media.licdn.com/dms/image/v2/D4D03AQHIKtd_Bk7p9g/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1690832848959?e=1735776000&v=beta&t=WzKYHiWBP8gymAQcbgs5gX9Tms_44d1LmdE1UNwKFQE"
-											alt="Andrei Dumitrescu"
-											className="w-32 h-32 rounded-full mx-auto mb-4"
-										/>
-										<h3 className="text-xl font-semibold text-center">Andrei Dumitrescu</h3>
+										<img src="/andrei.jpeg" alt="Andrei Dumitrescu" className="w-32 h-32 rounded-full mx-auto mb-4" />
+										<h3 className="text-xl font-semibold text-center text-gray-700">Andrei Dumitrescu</h3>
 										<p className="text-center text-gray-600">Co-Founder, CTO</p>
 										<p className="text-center text-blue-600 mt-2">andreidumitrescu@celira.dev</p>
 									</div>
@@ -583,12 +608,436 @@ export default function Home() {
 
 							<section className="mb-12">
 								<h2 className="text-2xl font-bold mb-6 text-blue-700">Social media: </h2>
-								<p>
+								<p className="text-gray-700 mb-4">
 									Our post can be found on our Linkedin page.{" "}
 									<a href="https://www.linkedin.com/company/celira-dev/?viewAsMember=true" className="font-bold text-blue-700">
 										Click here!
 									</a>
 								</p>
+							</section>
+						</>
+					)}
+
+					{/* Milestone 6 */}
+					{milestones.milestone6 && (
+						<>
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">Market Analysis for Celira</h2>
+								<p className="text-gray-700">
+									Conducting a comprehensive market analysis for Celira involves evaluating the website localization services market,
+									understanding the competitive landscape, and projecting potential market share and revenue over the next five years.
+								</p>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">1. Target Market Size and Sub-Markets</h2>
+								<p className="text-gray-700 mb-4">
+									The global website localization services market was valued at approximately <strong>USD 5.3 million in 2022</strong> and is
+									projected to reach <strong>USD 8.9 million by 2033</strong>, exhibiting a compound annual growth rate (CAGR) of 6.8% from
+									2023 to 2033.{" "}
+									<a
+										href="https://www.regionalresearchreports.com/industry-reports/website-localization-services-market/BS-6903?utm_source=chatgpt.com"
+										className="text-blue-600 underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										(REGIONAL RESEARCH REPORTS)
+									</a>
+								</p>
+
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Sub-Markets:</h3>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Automatic Website Localization Software:</strong> Valued at <strong>USD 1,939.5 million in 2023</strong>,
+										expected to reach <strong>USD 3,158.2 million by 2030</strong>, with a CAGR of 7.5%.{" "}
+										<a
+											href="https://www.verifiedmarketreports.com/product/automatic-website-localization-software-market/?utm_source=chatgpt.com"
+											className="text-blue-600 underline"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											(VERIFIED MARKET REPORTS)
+										</a>
+									</li>
+									<li>
+										<strong>Software Localization Market:</strong> Valued at <strong>USD 5.9 billion in 2022</strong>, projected to reach{" "}
+										<strong>USD 15.6 billion by 2032</strong>, growing at a CAGR of 10.6%.{" "}
+										<a
+											href="https://www.alliedmarketresearch.com/software-localization-market-A107562?utm_source=chatgpt.com"
+											className="text-blue-600 underline"
+											target="_blank"
+											rel="noopener noreferrer"
+										>
+											(ALLIED MARKET RESEARCH)
+										</a>
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">2. Number of Competitors in the Market</h2>
+								<p className="text-gray-700">
+									The website localization services market comprises numerous players, including both established companies and emerging
+									startups. Key competitors include:
+								</p>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>Weglot</li>
+									<li>Lokalise</li>
+									<li>Smartcat</li>
+									<li>Translated</li>
+									<li>Gengo</li>
+									<li>RWS Moravia</li>
+									<li>Morningside Translations</li>
+									<li>AMPLEXOR International</li>
+									<li>Acclaro</li>
+									<li>applingua</li>
+									<li>Argos Multilingual</li>
+									<li>Day Translations</li>
+								</ul>
+								<p className="text-gray-700">
+									<a
+										href="https://www.cognitivemarketresearch.com"
+										className="text-blue-600 underline"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										(COGNITIVE MARKET RESEARCH)
+									</a>
+								</p>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">3. Competition and Market Share</h2>
+								<p className="text-gray-700">
+									While specific market share data for each competitor is limited, the market is characterized by a mix of large enterprises
+									and specialized service providers. The presence of numerous competitors indicates a fragmented market with no single
+									dominant player, suggesting opportunities for new entrants like Celira to capture market share by offering innovative
+									solutions.
+								</p>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">4. Estimated Market Share for Celira (Years 1-5)</h2>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Year 1:</strong> 0.5% of the global market
+									</li>
+									<li>
+										<strong>Year 2:</strong> 1.0%
+									</li>
+									<li>
+										<strong>Year 3:</strong> 1.5%
+									</li>
+									<li>
+										<strong>Year 4:</strong> 2.0%
+									</li>
+									<li>
+										<strong>Year 5:</strong> 2.5%
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">5. Total Market Value and Celira's Revenue Projections</h2>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Year 1:</strong> Total Market Value: USD 5.6 million, Celira's Revenue: USD 28,000
+									</li>
+									<li>
+										<strong>Year 2:</strong> Total Market Value: USD 6.0 million, Celira's Revenue: USD 60,000
+									</li>
+									<li>
+										<strong>Year 3:</strong> Total Market Value: USD 6.4 million, Celira's Revenue: USD 96,000
+									</li>
+									<li>
+										<strong>Year 4:</strong> Total Market Value: USD 6.8 million, Celira's Revenue: USD 136,000
+									</li>
+									<li>
+										<strong>Year 5:</strong> Total Market Value: USD 7.3 million, Celira's Revenue: USD 182,500
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">6. Profitability Analysis</h2>
+								<p className="text-gray-700 mb-4">
+									Considering the projected revenue growth and the increasing demand for website localization services, Celira has the
+									potential to achieve profitability within the first few years of operation. By capturing a modest market share and
+									leveraging the expanding market size, Celira can establish a sustainable business model with increasing revenues over time.
+								</p>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">Conclusion</h2>
+								<p className="text-gray-700">
+									The website localization services market presents a growing opportunity for Celira. With a strategic approach to capturing
+									market share and meeting the evolving needs of businesses seeking localization solutions, Celira is well-positioned to
+									achieve profitability and contribute to the industry's expansion in the coming years.
+								</p>
+							</section>
+						</>
+					)}
+
+					{/* Milestone 7 */}
+					{milestones.milestone7 && (
+						<>
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">Motivating the MVP Features Based on Research</h2>
+
+								<section className="mb-8">
+									<h3 className="text-xl font-semibold text-blue-700 mb-4">1. Local Script for Code Modification and JSON File Extraction</h3>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">Why it’s included:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											<strong>Customer Pain Point:</strong> Based on interviews, developers expressed concerns about the security of
+											existing localization tools that operate on cloud-based platforms. They want a solution that ensures sensitive data
+											and code remain within their local environment.
+										</li>
+										<li>
+											<strong>Competitive Advantage:</strong> Offering a local script directly addresses the security concerns highlighted
+											in research, making Celira stand out among competitors like Phrase and Weglot that rely on cloud-based solutions.
+										</li>
+										<li>
+											<strong>Efficiency:</strong> Automating the generation of JSON files saves significant time for developers, aligning
+											with the market demand for streamlined localization workflows.
+										</li>
+									</ul>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">How it aligns with findings:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											Freelance developers and agencies repeatedly emphasized the need for a secure, efficient way to set up multilingual
+											support without exposing data to third-party servers.
+										</li>
+										<li>
+											By enabling local processing, Celira appeals to both small-scale developers and agencies managing sensitive
+											projects.
+										</li>
+									</ul>
+								</section>
+
+								<section className="mb-8">
+									<h3 className="text-xl font-semibold text-blue-700 mb-4">2. Ability to Update Translations by the User</h3>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">Why it’s included:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											<strong>Customer Need:</strong> Agencies and non-technical users (e.g., marketers) want the ability to edit
+											translations without needing to involve developers. This was a recurring theme in focus group feedback.
+										</li>
+										<li>
+											<strong>User Empowerment:</strong> Providing a user-friendly interface to update translations ensures that project
+											owners and clients can maintain control over content without requiring technical expertise.
+										</li>
+										<li>
+											<strong>Versatility:</strong> This feature allows for ongoing adjustments and corrections, making the tool valuable
+											not just for initial setup but also for long-term localization needs.
+										</li>
+									</ul>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">How it aligns with findings:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											Agencies specifically requested tools that facilitate client collaboration. The ability to edit translations gives
+											Celira a competitive edge by addressing both developer and non-technical user requirements.
+										</li>
+										<li>
+											E-commerce businesses expressed interest in tools that enable quick updates to product descriptions and promotional
+											content, supporting this feature’s inclusion.
+										</li>
+									</ul>
+								</section>
+
+								<section className="mb-8">
+									<h3 className="text-xl font-semibold text-blue-700 mb-4">3. Freemium Plan with 50,000 Credits and Paid Credit Purchases</h3>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">Why it’s included:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											<strong>Lower Barrier to Entry:</strong> Research revealed that many small developers and startups are hesitant to
+											commit to expensive solutions without testing their value first. A freemium plan encourages adoption by removing
+											upfront costs.
+										</li>
+										<li>
+											<strong>Scalability:</strong> Offering 50,000 credits allows new users to experiment with Celira’s capabilities on
+											smaller projects, while the option to purchase more credits ensures scalability for larger projects.
+										</li>
+										<li>
+											<strong>Proven Model:</strong> Competitors like Vercel and other SaaS platforms have successfully used freemium
+											models to attract a wide user base, converting free users into paying customers over time.
+										</li>
+									</ul>
+									<h4 className="text-lg font-semibold text-blue-700 mb-2">How it aligns with findings:</h4>
+									<ul className="list-disc pl-6 text-gray-700 mb-4">
+										<li>
+											Developers and small agencies highlighted budget constraints, especially during the initial stages of project
+											localization. The freemium plan addresses this need while showcasing the tool’s value.
+										</li>
+										<li>
+											The token-based model was specifically well-received during interviews, as it offers flexibility and ensures that
+											users pay only for what they need, making it appealing to both small and large customers.
+										</li>
+									</ul>
+								</section>
+							</section>
+
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">Conclusion</h2>
+								<p className="text-gray-700">
+									The MVP features are directly inspired by customer pain points and feedback gathered during market research:
+								</p>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>The local script addresses the security and efficiency concerns that are critical to developers and agencies.</li>
+									<li>
+										The ability to update translations empowers users to maintain and refine their projects without technical barriers,
+										ensuring long-term relevance and usability.
+									</li>
+									<li>The freemium plan removes initial friction for adoption, builds trust in the product, and supports scalable growth.</li>
+								</ul>
+								<p className="text-gray-700">
+									These features strike a balance between addressing the core needs of the target audience and setting Celira apart from its
+									competitors, ensuring a solid foundation for future growth.
+								</p>
+							</section>
+						</>
+					)}
+
+					{/* Milestone 8 */}
+					{milestones.milestone8 && (
+						<>
+							<section className="mb-12">
+								<h2 className="text-2xl font-bold mb-6 text-blue-700">Milestone: Getting People to Use the MVP</h2>
+
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Objective</h3>
+								<p className="text-gray-700 mb-4">
+									The goal of this milestone was to validate that our MVP solves real problems for users and that it can attract paying
+									customers. We aimed to document user engagement and, if possible, secure commitments in the form of payments, subscriptions,
+									or signed agreements.
+								</p>
+
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Process Documentation</h3>
+
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">1. Preparing the MVP for Launch</h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Final Adjustments:</strong> Addressed minor bugs and usability issues reported during initial internal testing
+										to ensure a smooth user experience.
+									</li>
+									<li>
+										<strong>Freemium Plan Activation:</strong> Enabled the 50,000 free credits to lower barriers for new users and encourage
+										trial usage.
+									</li>
+									<li>
+										<strong>Analytics Setup:</strong> Integrated Hotjar for user behavior tracking and Google Analytics for traffic insights
+										to measure engagement.
+									</li>
+								</ul>
+
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">2. Reaching Out to Potential Users</h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Target Audience:</strong> Focused on freelance developers, small agencies, and e-commerce managers who showed
+										interest during the customer discovery phase.
+									</li>
+									<li>
+										<strong>Channels Used:</strong>
+										<ul className="list-disc pl-6">
+											<li>
+												<strong>Email Campaigns:</strong> Sent personalized emails to contacts who had signed up on our landing page
+												during the discovery phase.
+											</li>
+											<iframe
+												className="w-full h-[1000px]"
+												src="https://docs.google.com/document/d/1LgwMw0NpquhT4jgq04YgwtKFtshZPOyPKv_VYYscef8/edit?usp=sharing"
+											></iframe>
+											<li>
+												<strong>Developer Forums:</strong> Shared the MVP on communities like Reddit (
+												<em>r/webdev, r/saas, r/agency</em>) and Dev.to, emphasizing the free credits and security features.
+											</li>
+											<li>
+												<strong>Social Media:</strong> Promoted Celira on LinkedIn and Twitter, targeting developers and small business
+												owners through hashtags and industry groups.
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">3. Gathering Feedback</h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Hotjar Recordings:</strong> Tracked user interactions to identify areas of friction or confusion within the
+										application.
+									</li>
+									<li>
+										<strong>Direct Communication:</strong> Reached out to users who spent significant time on the platform, offering
+										one-on-one calls to understand their needs.
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Results and Evidence</h3>
+
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">Engagement Metrics </h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Google Analytics:</strong> Recorded 250+ unique visitors.
+									</li>
+									<li>
+										<strong>Hotjar Insights:</strong>
+										<ul className="list-disc pl-6">
+											<li>Captured 150+ session recordings showing users successfully interacting with the app.</li>
+										</ul>
+									</li>
+								</ul>
+
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">Feedback Highlights</h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>
+										<strong>Positive Feedback:</strong>
+										<ul className="list-disc pl-6">
+											<li>"The local script saved me hours of manual work." – Freelance Developer</li>
+											<li>
+												"It’s refreshing to have a secure localization tool that doesn’t rely on cloud-based processing." – Agency Owner
+											</li>
+										</ul>
+									</li>
+									<li>
+										<strong>Constructive Feedback:</strong>
+										<ul className="list-disc pl-6">
+											<li>Some users requested clearer instructions for first-time use.</li>
+											<li>Agencies suggested adding a feature for bulk translation updates.</li>
+										</ul>
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h4 className="text-lg font-semibold text-blue-700 mb-2">Evidence</h4>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>Hotjar Screenshots: Photos and session recordings of users interacting with the app.</li>
+								</ul>
+
+								<div className="grid md:grid-cols-2 gap-8 mt-6">
+									<img src="/stats1.jpeg" alt="Hotjar Insights" className="w-full rounded-lg shadow-md" />
+									<img src="/stats2.jpeg" alt="Engagement Metrics" className="w-full rounded-lg shadow-md" />
+								</div>
+							</section>
+
+							<section className="mb-12">
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Lessons Learned</h3>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>Onboarding is Key: Simplified instructions can reduce the learning curve for new users.</li>
+									<li>
+										Feature Prioritization: Based on feedback, bulk translation updates and enhanced onboarding materials will be added to
+										the roadmap.
+									</li>
+								</ul>
+							</section>
+
+							<section className="mb-12">
+								<h3 className="text-xl font-semibold text-blue-700 mb-4">Next Steps</h3>
+								<ul className="list-disc pl-6 text-gray-700 mb-4">
+									<li>Implement feature improvements based on feedback.</li>
+									<li>Focus on converting more freemium users into paying customers.</li>
+									<li>Expand outreach efforts to reach more agencies and e-commerce managers.</li>
+								</ul>
 							</section>
 						</>
 					)}
